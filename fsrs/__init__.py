@@ -69,7 +69,7 @@ def main():
         r_error("Failed to retrieve projects: {}".format(projects.status_code))
 
     if project_id is None:
-        sys.exit(r_error("Project {} not found".format(args.project)))
+        sys.exit(r_error("Project {} not found (or you do not have permissions on that project)".format(args.project)))
 
     # Get a token for the user in the project
     authToken = AuthTokenToken(openIDToken, args.auth_url, {"project": { "id" : project_id } })
