@@ -7,6 +7,12 @@ A tool to obtain the usage of resources from an OpenStack server that is integra
 git clone https://github.com/grycap/fsrs.git
 ```
 
+FSRS depends on `python-dateutil` library, which can be installed via pip:
+
+```
+pip install python-dateutil
+```
+
 ## Usage
 
 ### Using a _bearer token_

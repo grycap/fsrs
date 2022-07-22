@@ -72,7 +72,7 @@ def main():
         sys.exit(r_error("Project {} not found".format(args.project)))
 
     # Get a token for the user in the project
-    authToken = AuthTokenToken(openIDToken, args.auth_url, {"project": { "id" : "e363b1b9f92d42b6944d64338edf7479"} })
+    authToken = AuthTokenToken(openIDToken, args.auth_url, {"project": { "id" : project_id } })
     if not authToken.get():
         sys.exit(r_error("Failed to get a valid token", 1))
 
